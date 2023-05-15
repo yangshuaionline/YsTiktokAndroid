@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用列表按钮背景 -->
+    <drawable name="base_list_btn_def">@color/white</drawable>
+    <drawable name="base_list_btn_sel">#EEEEEE</drawable>
+
+
+    <!-- Item条纹的颜色 -->
+    <drawable name="item_gray">#20AAAAAA</drawable>
+    <drawable name="item_click_gray">#20646363</drawable>
+</resources>

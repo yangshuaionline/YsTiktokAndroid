@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--自定义选择器的基本布局-->
+    <TextView
+        android:id="@+id/tv_picker_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="请选择"
+        android:textColor="@color/text"
+        android:textSize="@dimen/base_font_size_17" />
+
+    <TextView
+        android:id="@+id/rl_picker_ok"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="@dimen/base_font_size_16"
+        />
+
+    <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+    <LinearLayout
+        android:id="@+id/timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_picker_ok"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/base_list_btn">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="确定"-->
+            <!--android:textColor="#666666"-->
+            <!--android:textSize="@dimen/base_font_size_17" />-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

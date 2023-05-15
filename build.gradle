@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    ext.kotlin_version="1.6.10"
+    repositories {
+//        maven { url 'https://dl.bintray.com/umsdk/release' }
+        //        友盟+ SDK Android端使用的在线依赖包托管网站是 bintray.com(jcenter)，由于该公司的业务调整，友盟+与2021年5月6日将各业务线的最新版SDK已经迁移至maven center
+        maven { url 'https://repo1.maven.org/maven2/' }
+
+//        maven {url 'https://dl.google.com/dl/android/maven2/'}
+//        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        mavenCentral()
+        maven {url 'https://dl.google.com/dl/android/maven2/'}
+        jcenter()
+        google()
+
+
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:7.0.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2/' }
+        //central仓和jcenter仓的聚合仓  云效公共代理库
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {url 'https://dl.google.com/dl/android/maven2/'}
+        google()
+        //融云 maven 仓库地址
+        maven {url "https://maven.rongcloud.cn/repository/maven-releases/"}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

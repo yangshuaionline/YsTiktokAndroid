@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // ARouter路由框架配置
+
+        //  AROUTER_GENERATE_DOC: "enable" 生成的文档路径 : build/generated/source/apt/(debug or release)/com/alibaba/android/arouter/docs/arouter-map-of-${moduleName}.json
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+        //  Kotlin  ARouter配置
+        kapt {arguments {arg("AROUTER_MODULE_NAME", project.getName())}}
+    }
+
+    // 统一资源前缀，规范资源引用
+    resourcePrefix "app_"
+
+    signingConfigs {
+        release {
+            storeFile file("keystore/key.jks")
+            storePassword "123456"
+            keyAlias "hcp"
+            keyPassword "123456"
+            v1SigningEnabled true//检查您工程的Gradle Plugin版本是否高于3.4.1，如果Gradle Plugin版本高于3.4.1，请您将Gradle Plugin版本降至3.4.1，并将Gradle版本降至5.4.1。如果无法降低Gradle Plugin及Gradle版本，需要在您工程的App模块下的build.gradle中添加签名配置
+            v2SigningEnabled true
+        }
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            storeFile file("keystore/key.jks")
+            storePassword "123456"
+            keyAlias "hcp"
+            keyPassword "123456"
+        }
+    }
+
+
+    buildTypes {
+        // PS:这里的双引号和\千万不要改，否则编译取不到这个值
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            // 根据编译版本动态配置域名
+
+            buildConfigField "Boolean", "DEBUG_MODE", "false"
+            // 边缘服务host
+            buildConfigField "String", "BASE_HOST", "\"https://www.wanandroid.com\""
+            // 消息服务host
+            buildConfigField "String", "BASE_MSG_HOST", "\"https://www.wanandroid.com\""
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            // 根据编译版本动态配置域名
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+            // 边缘服务host
+            buildConfigField "String", "BASE_HOST", "\"https://www.wanandroid.com\""
+            // 消息服务host
+            buildConfigField "String", "BASE_MSG_HOST", "\"https://www.wanandroid.com\""
+
+
+//            android.applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/signAndroid/debug")
+//                    outputFileName = "com.ujuz.uerp_${defaultConfig.versionName}_${variant.buildType.name}.apk"
+//                }
+//            }
+        }
+
+    }
+
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+
+    repositories {//配置远程仓库
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //顶层
+    implementation project(':library_base')
+    // 主业务模块
+    implementation project(':module_main')
+    implementation project(':module_find')
+    implementation project(':module_publish')
+    implementation project(':module_first')
+    implementation project(':module_mine')
+    implementation project(':module_message')
+    implementation project(':mod_login')
+    implementation project(":mod_cart")
+    implementation project(':mod_pay')
+    implementation project(':mod_video')
+    implementation project(':mod_im')
+    kapt rootProject.ext.dependencies.arouterCompiler
+    implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.splashscreen
+}
+
+
+
+

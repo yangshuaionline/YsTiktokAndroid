@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="325dp"
+        android:layout_height="265dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="325dp"
+            android:layout_height="265dp"
+            android:background="#ffffff"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="22dp"
+                android:paddingBottom="24dp"
+                android:text="提示"
+                android:textColor="@color/text"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="273dp"
+                android:layout_height="66dp"
+                android:text="尊敬的用户:您已超过90天未修改密码,为保障您的帐户安全，请及时修改密码并重新登录"
+                android:textColor="@color/text"
+                android:textSize="16dp" />
+
+            <com.yangshuai.lib.button.StateButton
+                android:id="@+id/reset_password"
+                android:layout_width="273dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="修改密码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_font_size_17"
+                app:normalBackgroundColor="@color/theme"
+                app:pressedBackgroundColor="@color/theme_down"
+                app:bt_radius="5dp" />
+
+            <TextView
+                android:id="@+id/forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:text="退出登录"
+                android:textColor="#FF9B9B9B"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

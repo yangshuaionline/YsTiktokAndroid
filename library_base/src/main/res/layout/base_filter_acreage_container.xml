@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/base_filter_acreage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="面积(㎡)"
+        android:textColor="@color/text"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/base_filter_acreage_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/base_filter_acreage_title"
+        android:layout_margin="@dimen/base_margin"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/base_filter_et_min_acreage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/base_filter_edittext_bg"
+            android:gravity="center"
+            android:hint="最小面积"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textColorHint="@color/filter_text_hint_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="至"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/base_filter_et_max_acreage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/base_filter_edittext_bg"
+            android:gravity="center"
+            android:hint="最大面积"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textColorHint="@color/filter_text_hint_color" />
+
+    </LinearLayout>
+
+    <!--范围选择-->
+    <com.yangshuai.library.base.widget.DoubleRangeSeekBar
+        android:id="@+id/base_filter_acreage_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/base_filter_acreage_input"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/base_margin"
+        app:drsb_button_height="30dp"
+        app:drsb_button_width="30dp"
+        app:drsb_seek_height="6dp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/base_filter_acreage_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_filter_acreage_seekbar"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:layout_marginBottom="65dp"
+        android:nestedScrollingEnabled="false" />
+
+
+    <LinearLayout
+        android:id="@+id/base_filter_acreage_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/base_margin"
+        android:paddingBottom="15dp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingEnd="@dimen/base_padding">
+
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_acreage_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="重置"
+            android:textColor="@color/base_text_color_hint"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/btn_light_gray"
+            app:pressedBackgroundColor="@color/btn_light_gray_down"
+            app:bt_radius="5dp" />
+
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_acreage_btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/theme"
+            app:pressedBackgroundColor="@color/theme_down"
+            app:bt_radius="5dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

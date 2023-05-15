@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+<!--    数据库名称-->
+    <dbname value="jzsh" />
+<!--    版本号-->
+    <version value="1" />
+<!--    表名小写-->
+    <cases value="lower" />
+<!--    外部应用不可访问-->
+    <storage value="internal" />
+    <list>
+<!--        视频实体类-->
+        <mapping class="com.yangshuai.library.base.db.VideoDB" />
+    </list>
+</litepal>
+

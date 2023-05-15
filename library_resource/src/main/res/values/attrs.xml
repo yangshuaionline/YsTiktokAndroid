@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="sl_maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--筛选栏按钮-->
+    <declare-styleable name="BaseFilterButtonView">
+        <!--筛选按钮文本内容-->
+        <attr name="fbv_text" format="string" />
+        <!--筛选按钮字体大小-->
+        <attr name="fbv_text_size" format="dimension" />
+        <!--筛选按钮字体默认颜色-->
+        <attr name="fbv_text_color" format="color" />
+        <!--筛选按钮字体选中颜色-->
+        <attr name="fbv_text_color_checked" format="color" />
+        <!--筛选按钮选中图标-->
+        <attr name="fbv_icon_checked" format="reference" />
+        <!--筛选按钮未选中图标-->
+        <attr name="fbv_icon_uncheck" format="reference" />
+        <!--图标大小-->
+        <attr name="fbv_icon_width" format="dimension" />
+        <attr name="fbv_icon_height" format="dimension" />
+        <!--设置按钮是否选中状态-->
+        <attr name="fbv_checked" format="boolean" />
+        <!--是否只显示图标，该模式用于没有文字，只有图标的筛选按钮，需要传入图标资源-->
+        <attr name="fbv_only_icon" format="boolean" />
+        <!--是否开启图标的旋转动画效果,纯文字模式下不显示动画，其他默认显示动画-->
+        <attr name="fbv_open_anim" format="boolean" />
+        <!--是否只显示文字-->
+        <attr name="fbv_only_text" format="boolean" />
+        <!--最大显示文本-->
+        <attr name="fbv_max_length" format="integer" />
+    </declare-styleable>
+
+    <!--双向拖动进度条-->
+    <declare-styleable name="DoubleRangeSeekBar">
+        <!--进度条按钮宽高-->
+        <attr name="drsb_button_width" format="dimension" />
+        <attr name="drsb_button_height" format="dimension" />
+        <!--进度条拖动按钮图片-->
+        <attr name="drsb_button_img" format="reference" />
+        <!--进度条背景颜色-->
+        <attr name="drsb_bg_color" format="color" />
+        <!--字体颜色-->
+        <attr name="drsb_text_color" format="color" />
+        <!--进度条颜色-->
+        <attr name="drsb_seek_color" format="color" />
+        <!--进度条高度-->
+        <attr name="drsb_seek_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleGridView">
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="spanCount" format="integer" />
+        <attr name="itemLayout" format="reference" />
+    </declare-styleable>
+
+    <!--AutoScaleSizeTextView-->
+    <declare-styleable name="AutoScaleSizeTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- 悬浮按钮 FloatingMenu-->
+    <declare-styleable name="FloatingMenu">
+        <attr name="fmm_progress_percent" format="integer" />
+        <attr name="fmm_progress_color" format="color" />
+        <attr name="fmm_progress" format="float" />
+        <attr name="fmm_button_interval" format="dimension" />
+        <attr name="fmm_cover" format="reference" />
+        <attr name="fmm_backgroundTint" format="color" />
+        <attr name="fmm_floating_direction" format="enum">
+            <enum name="up" value="0" />
+            <enum name="left" value="1" />
+            <enum name="down" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

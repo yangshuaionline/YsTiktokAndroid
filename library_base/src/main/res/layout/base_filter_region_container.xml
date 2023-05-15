@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--第一级-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/base_filter_region_rv1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:nestedScrollingEnabled="false" />
+
+    <!--第二级-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/base_filter_region_rv2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:nestedScrollingEnabled="false" />
+
+    <!--第三级-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/base_filter_region_rv3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#F7F7F7"
+        android:nestedScrollingEnabled="false" />
+
+</LinearLayout>

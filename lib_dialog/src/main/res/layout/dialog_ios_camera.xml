@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:background="@null"
+    xmlns:tool="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.yangshuai.library.base.widget.SimpleRecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/base_white_gray_radius_10"/>
+        <TextView
+            android:id="@+id/ios_center_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取消按钮"
+            android:textColor="@color/text_333333"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:paddingVertical="11.5dp"
+            android:textSize="18sp"
+            android:background="@drawable/base_white_gray_radius_10"/>
+    </LinearLayout>
+</FrameLayout>

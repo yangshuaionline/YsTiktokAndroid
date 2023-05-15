@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">library_resource</string>
+    <string name="yjyz_true_house">优居优住真房源</string>
+
+    <!--LoadView-->
+    <string name="load_network_error">当前网络不可用,请检查你的网络设置</string>
+    <string name="load_time_out_error">网络超时</string>
+    <string name="load_data_error">数据加载失败</string>
+    <string name="load_empty">暂无数据</string>
+    <string name="load_refresh_tips">点击页面刷新</string>
+    <string name="load_more_no_data">已加载全部数据</string>
+    <string name="load_no_authority">不好意思，您暂无查看权限！</string>
+
+    <string name="no_authority">不好意思，您无权限操作！</string>
+
+</resources>

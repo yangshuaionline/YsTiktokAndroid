@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--配置root-path。这样子可以读取到sd卡和一些应用分身的目录，否则微信分身保存的图片，就会导致
+        java.lang.IllegalArgumentException: Failed to find configured root that contains /storage/emulated/999/xxx/xxx/xxx.jpg，
+        在小米6的手机上微信分身有这个crash，华为没有-->
+
+    <!--对应 Environment.getExternalStorageDirectory() 指向的目录-->
+    <external-path
+        name="take_picture"
+        path="." />
+
+    <!--对应 content.getFileDir() 获取到的目录-->
+    <files-path
+        name="files-path"
+        path="." />
+
+</paths>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="BaseDialog" parent="android:style/Theme.Dialog" tools:ignore="ResourceName">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+    <style name="BaseDialogFull" parent="android:style/Theme.Dialog" tools:ignore="ResourceName">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+</resources>

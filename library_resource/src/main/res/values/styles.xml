@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="UJUZAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="UJUZActivityTheme" parent="UJUZAppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@mipmap/test_bg</item>
+    </style>
+
+    <!-- 透明主题 -->
+    <style name="TransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="UJUZActivityTheme.FullScreen" parent="UJUZAppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--优化APP启动白屏问题-->
+    <style name="UJUZActivityTheme.SplashTheme" parent="UJUZActivityTheme.FullScreen">
+
+    </style>
+
+
+    <style name="UJUZActivityTheme.Transparent" parent="UJUZAppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="UJUZActivityTheme.Welcom" parent="UJUZAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:tileMode">disabled</item>
+    </style>
+
+
+    <style name="Toolbar.Nav" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="Toolbar.Nav.White" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!--ToolBar主题菜单都是白色-->
+    <style name="Toolbar.NavAndTitle.White" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Toolbar.TitleText.White" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Navbar.Nav" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimary">@color/theme</item>
+    </style>
+
+    <style name="TabLayoutTextSize" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/base_font_size_13</item>
+    </style>
+
+    <style name="ContractTabLayoutTextSize" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/base_font_size_16</item>
+    </style>
+
+    <style name="BaseTabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <!-- 通用的Dialog风格 -->
+    <style name="UBaseDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="BaseDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="BaseDialog">
+        <item name="android:windowEnterAnimation">@anim/base_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/base_exit_to_bottom</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <!--popupWindow动画-->
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="round_radius" format="dimension" />
+    </declare-styleable>
+
+    <style name="RadioButtonStyle" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/base_selector_choose_man_women</item>
+    </style>
+<!--    优化启动页-->
+</resources>

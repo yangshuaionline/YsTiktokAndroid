@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/base_filter_more_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/base_filter_more_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:fastScrollEnabled="false" />
+
+            <!--房源来源-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/base_filter_tv_house_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房源来源"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/base_filter_rly_house_source"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:id="@+id/base_filter_tv_house_source_text"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14"
+                    android:hint="请选择房源来源"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+             <ImageView
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                 android:src="@mipmap/icon_right"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/base_filter_tv_house_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房源码"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--房源码和扫一扫-->
+                <com.yangshuai.library.base.view.ClearEditTextView
+                    android:id="@+id/base_filter_et_house_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_toStartOf="@+id/base_filter_ib_house_code"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="请输入房源码(支持模糊查询)"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14" />
+
+                <ImageButton
+                    android:id="@+id/base_filter_ib_house_code"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:background="@color/white"
+                    android:src="@mipmap/icon_filter_qr" />
+
+            </RelativeLayout>
+
+
+            <!--房源归属人-->
+            <TextView
+                android:id="@+id/base_filter_tv_house_agent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房源归属人"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_house_agent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入归属人姓名/手机号"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--房源创建人-->
+            <TextView
+                android:id="@+id/base_filter_tv_house_agent_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房源创建人"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_house_agent_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入创建人姓名/手机号"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--业主号码-->
+            <TextView
+                android:id="@+id/base_filter_tv_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="业主号码"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入业主号码/备用电话"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--栋座-->
+            <TextView
+                android:id="@+id/base_filter_tv_building"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="栋座"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_building"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入栋座"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--单元-->
+            <TextView
+                android:id="@+id/base_filter_tv_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="单元"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入单元"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--楼层-->
+            <TextView
+                android:id="@+id/base_filter_tv_floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="楼层"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--最低楼层-->
+                <com.yangshuai.library.base.view.ClearEditTextView
+                    android:id="@+id/base_filter_et_floor_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="最低楼层"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/text" />
+
+                <!--最高楼层-->
+                <com.yangshuai.library.base.view.ClearEditTextView
+                    android:id="@+id/base_filter_et_floor_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="最高楼层"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberSigned"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14" />
+
+
+            </LinearLayout>
+
+
+            <!--房号-->
+            <TextView
+                android:id="@+id/base_filter_tv_room_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房号"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_room_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入房号"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--门店-->
+            <TextView
+                android:id="@+id/base_filter_tv_store_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="门店"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <com.yangshuai.library.base.view.ClearEditTextView
+                android:id="@+id/base_filter_et_store_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_margin"
+                android:layout_marginBottom="@dimen/base_margin"
+                android:background="@drawable/base_edittext_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:hint="请输入门店名/门店码"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/filter_text_hint_color"
+                android:textSize="@dimen/base_font_size_14" />
+
+            <!--发布时间(日期选择器)-->
+            <TextView
+                android:id="@+id/base_filter_tv_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="发布时间"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--开始时间-->
+                <TextView
+                    android:id="@+id/base_filter_et_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="开始时间"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/text" />
+
+                <!--结束时间-->
+                <TextView
+                    android:id="@+id/base_filter_et_ent_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="结束时间"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/filter_text_hint_color"
+                    android:textSize="@dimen/base_font_size_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/base_filter_ll_dj_sf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--底价(租房不显示)-->
+                <TextView
+                    android:id="@+id/base_filter_tv_low_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/base_padding"
+                    android:text="底价"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/base_font_size_17"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--最低底价-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="@dimen/base_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:orientation="horizontal">
+
+                        <com.yangshuai.library.base.view.ClearEditTextView
+                            android:id="@+id/base_filter_et_low_price_min"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:layout_toStartOf="@+id/base_filter_et_low_price_min_unit"
+                            android:background="@drawable/base_edittext_stroke_bg"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:hint="最低底价"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:paddingStart="10dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="14dp"
+                            android:textColor="@color/text"
+                            android:textColorHint="@color/filter_text_hint_color"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                        <TextView
+                            android:id="@+id/base_filter_et_low_price_min_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:text="万"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/base_font_size_14" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="9dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/text" />
+
+                    <!--最高底价-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="@dimen/base_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:orientation="horizontal">
+
+                        <com.yangshuai.library.base.view.ClearEditTextView
+                            android:id="@+id/base_filter_et_low_price_max"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:layout_toStartOf="@+id/base_filter_et_low_price_max_unit"
+                            android:background="@drawable/base_edittext_stroke_bg"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:hint="最高底价"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:paddingStart="10dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="14dp"
+                            android:textColor="@color/text"
+                            android:textColorHint="@color/filter_text_hint_color"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                        <TextView
+                            android:id="@+id/base_filter_et_low_price_max_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:text="万"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--首付(租房不显示)-->
+                <TextView
+                    android:id="@+id/base_filter_tv_dp_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/base_padding"
+                    android:text="首付"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/base_font_size_17"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--最低-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="@dimen/base_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:orientation="horizontal">
+
+                        <com.yangshuai.library.base.view.ClearEditTextView
+                            android:id="@+id/base_filter_et_dp_price_min"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/base_filter_et_dp_price_min_unit"
+                            android:background="@drawable/base_edittext_stroke_bg"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:hint="最低首付"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:paddingStart="10dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="14dp"
+                            android:textColor="@color/text"
+                            android:textColorHint="@color/filter_text_hint_color"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                        <TextView
+                            android:id="@+id/base_filter_et_dp_price_min_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:text="万"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="9dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/text" />
+
+                    <!--最高-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="@dimen/base_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:orientation="horizontal">
+
+                        <com.yangshuai.library.base.view.ClearEditTextView
+                            android:id="@+id/base_filter_et_dp_price_max"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/base_filter_et_dp_price_max_unit"
+                            android:background="@drawable/base_edittext_stroke_bg"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:hint="最高首付"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:paddingStart="10dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="14dp"
+                            android:textColor="@color/text"
+                            android:textColorHint="@color/filter_text_hint_color"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                        <TextView
+                            android:id="@+id/base_filter_et_dp_price_max_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:text="万"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/base_font_size_14" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--房源质量分 二手房源、门店二手房、我的二手房、二手房公共房源-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/base_filter_tv_dp_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="房源质量分"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/base_filter_lly_dp_score"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--最低-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:orientation="horizontal">
+
+                    <com.yangshuai.library.base.view.ClearEditTextView
+                        android:id="@+id/base_filter_et_dp_score_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/base_filter_et_dp_score_min_unit"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:hint="最低质量分"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:textColor="@color/text"
+                        android:textColorHint="@color/filter_text_hint_color"
+                        android:textSize="@dimen/base_font_size_14" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/base_filter_et_dp_score_min_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="分"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/base_font_size_14" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/text" />
+
+                <!--最高-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:orientation="horizontal">
+
+                    <com.yangshuai.library.base.view.ClearEditTextView
+
+                        android:id="@+id/base_filter_et_dp_score_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/base_filter_et_dp_score_max_unit"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:hint="最高质量分"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:textColor="@color/text"
+                        android:textColorHint="@color/filter_text_hint_color"
+                        android:textSize="@dimen/base_font_size_14" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/base_filter_et_dp_score_max_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="分"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/base_font_size_14" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            <!--建筑年代 二手房源、门店二手房、我的二手房、我的收藏、二手房公共房源-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/base_filter_tv_dp_buildage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/base_padding"
+                android:text="建筑年代"
+                android:textColor="@color/text"
+                android:textSize="@dimen/base_font_size_17"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/base_filter_ll_dp_buildage"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--最低-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:orientation="horizontal">
+
+                    <com.yangshuai.library.base.view.ClearEditTextView
+                        android:id="@+id/base_filter_et_dp_buildage_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:hint="最早年代"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:textColor="@color/text"
+                        android:textColorHint="@color/filter_text_hint_color"
+                        android:textSize="@dimen/base_font_size_14" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/text" />
+
+                <!--最高-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="@dimen/base_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/base_edittext_stroke_bg"
+                    android:orientation="horizontal">
+
+                    <com.yangshuai.library.base.view.ClearEditTextView
+
+                        android:id="@+id/base_filter_et_dp_buildage_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/base_edittext_stroke_bg"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:hint="最近年代"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:textColor="@color/text"
+                        android:textColorHint="@color/filter_text_hint_color"
+                        android:textSize="@dimen/base_font_size_14" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/base_filter_more_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingTop="0dp"
+        android:paddingEnd="@dimen/base_padding"
+        android:paddingBottom="0dp">
+
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="重置"
+            android:textColor="@color/base_text_color_hint"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/btn_light_gray"
+            app:pressedBackgroundColor="@color/btn_light_gray_down"
+            app:bt_radius="5dp" />
+
+        <!--如果按钮有阴影，请使用android:stateListAnimator="@null"-->
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/theme"
+            app:pressedBackgroundColor="@color/theme_down"
+            app:bt_radius="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yangshuai.module.im.viewmodel.ImGroupViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh_layout"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:items="@{viewModel.itemListData}"
+                app:itemBinding="@{viewModel.itemListDataBinding}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/et_content_im_group"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:paddingHorizontal="5dp"
+                android:hint="请输入您想说的话"
+                android:text="@{viewModel.msgText}"
+                android:background="@drawable/base_white_gray_radius_10"/>
+            <Button
+                android:id="@+id/bt_submit_im_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/base_blue_blue_radius_3"
+                android:text="发送"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

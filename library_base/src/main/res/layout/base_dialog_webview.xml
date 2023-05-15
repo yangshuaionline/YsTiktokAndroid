@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/base_dialog_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="35dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="35dp">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/layout_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/base_margin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title" >
+
+            <com.yangshuai.library.base.view.BaseWebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+        <Button
+            android:id="@+id/btn_dialog_left"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/base_dialog_btn_left_bg"
+            android:text="取消"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/btn_dialog_right"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_dialog_content" />
+
+        <Button
+            android:id="@+id/btn_dialog_center"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/base_dialog_btn_right_bg"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_dialog_content" />
+
+        <Button
+            android:id="@+id/btn_dialog_right"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/base_dialog_btn_right_bg"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_dialog_left"
+            app:layout_constraintTop_toBottomOf="@id/layout_dialog_content"
+            app:layout_goneMarginLeft="0dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

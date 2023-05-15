@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--更多筛选的每个组内的按钮-->
+    <com.yangshuai.lib.button.StateButton
+        android:id="@+id/base_filter_more_btn_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:paddingStart="8dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="6dp"
+        android:stateListAnimator="@null"
+        android:text="ITEM"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:normalBackgroundColor="#F7F7F7"
+        app:normalTextColor="@color/text"
+        app:pressedBackgroundColor="@color/theme"
+        app:pressedTextColor="@color/white"
+        app:bt_radius="5dp" />
+</LinearLayout>

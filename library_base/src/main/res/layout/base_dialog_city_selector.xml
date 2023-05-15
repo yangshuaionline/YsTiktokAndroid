@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="500dp"
+    android:background="@color/btn_light_gray_e6">
+
+   <TextView
+       android:id="@+id/tv_title"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:background="@color/white"
+       android:gravity="center"
+       android:text="选择直播城市"
+       android:textColor="@color/text"
+       android:textSize="17sp"/>
+
+   <TextView
+       android:id="@+id/tv_cancel"
+       android:layout_width="wrap_content"
+       android:layout_height="50dp"
+       android:layout_alignParentRight="true"
+       android:gravity="center_vertical"
+       android:textSize="@dimen/base_font_size_15"
+       android:paddingLeft="15dp"
+       android:paddingRight="15dp"
+       android:text="取消"/>
+
+   <com.yangshuai.library.base.entity.city.AddressSelector
+       android:id="@+id/address_selector"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/white"
+       android:layout_marginTop="3dp"
+       android:layout_below="@+id/tv_title"/>
+</RelativeLayout>

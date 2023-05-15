@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Android v23版本以下 不支持gravity 属性-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/icon_welcome_bg" />
+    </item>
+
+    <item android:bottom="200dp">
+        <bitmap android:src="@drawable/icon_welcome_logo" />
+    </item>
+
+    <item android:bottom="20dp">
+        <bitmap android:src="@drawable/icon_welcome_text" />
+    </item>
+
+    <item android:top="500dp">
+        <bitmap android:src="@drawable/icon_welcome_logo_text" />
+    </item>
+
+</layer-list>

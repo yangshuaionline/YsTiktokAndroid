@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/base_list_btn">
+
+
+    <TextView
+        android:id="@+id/base_filter_sort_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/base_padding"
+        android:text="排序"
+        android:textColor="@color/text"
+        android:textSize="@dimen/base_font_size_16" />
+
+</RelativeLayout>

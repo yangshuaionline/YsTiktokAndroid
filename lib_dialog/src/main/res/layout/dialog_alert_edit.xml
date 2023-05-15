@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dialog_layout_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/alert_dialog_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/alert_dialog_et_message"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:visibility="visible"
+                android:gravity="left|top"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:background="@drawable/dialog_gray_radius_3"
+                android:textSize="13sp"
+                android:hint="1231231231231123123123123123123123123123123123123123123123123123112312312312312312312312312312312312312312312312312311231231231231231231231231231231231231231231231231231123123123123123123123123123123123123123"/>
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

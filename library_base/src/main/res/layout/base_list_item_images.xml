@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="java.lang.String" />
+
+        <variable
+            name="listener"
+            type="com.yangshuai.library.base.interfaces.ImageClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="85dp"
+            android:layout_marginRight="8dp"
+            android:background="#ebebeb"
+            android:onClick="@{v->listener.onImageClick(imageUrl)}"
+            android:scaleType="centerCrop"
+            app:imageUrlList="@{imageUrl}" />
+
+
+    </RelativeLayout>
+</layout>

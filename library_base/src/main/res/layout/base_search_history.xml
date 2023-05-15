@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.yangshuai.library.base.viewmodel.SearchBaseViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/history_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="@{viewModel.showHistory?View.VISIBLE:View.GONE}">
+
+        <TextView
+            android:id="@+id/tv_search_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="搜索历史"
+            android:textColor="#333333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/icon_trash"
+            android:onClick="@{v->viewModel.clearHistoryData()}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_search_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_search_label" />
+
+        <com.yangshuai.library.base.view.LabelsView
+            android:id="@+id/labels"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/img_trash"
+            app:layout_constraintStart_toStartOf="@id/tv_search_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_search_label"/>
+
+        <TextView
+            android:id="@+id/tv_search_more_history"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:drawableEnd="@mipmap/icon_filter_arrow_uncheck"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:onClick="@{v->viewModel.showMoreHistory()}"
+            android:text="更多搜索历史"
+            android:textColor="#666666"
+            android:visibility="@{viewModel.isShowMoreHistory?View.VISIBLE:View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labels" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

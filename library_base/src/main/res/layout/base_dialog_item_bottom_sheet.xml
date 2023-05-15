@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_bottom_sheet_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/base_btn_click_white_gray"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:textColor="@color/base_btn_text_select_dark_blue"
+    android:textSize="18sp" />

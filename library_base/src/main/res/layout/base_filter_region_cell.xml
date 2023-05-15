@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/base_padding"
+    android:paddingEnd="@dimen/base_padding">
+
+    <TextView
+        android:id="@+id/base_filter_region_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toStartOf="@+id/base_filter_region_checkbox"
+        android:gravity="center_vertical"
+        android:text="区域"
+        android:textColor="@color/text"
+        android:textSize="@dimen/base_font_size_16" />
+
+    <CheckBox
+        android:id="@+id/base_filter_region_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false"/>
+
+</RelativeLayout>

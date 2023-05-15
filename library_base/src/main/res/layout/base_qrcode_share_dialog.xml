@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#FFC9C9C9"
+        android:background="@color/white"
+        android:id="@+id/qrcode_share_title"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_share_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@mipmap/icon_share_wechat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="发送给朋友"
+                android:textColor="@color/base_text_color_hint"
+                android:textSize="@dimen/base_font_size_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share_wechat_cof"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@mipmap/icon_share_wechat_cof" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="分享到朋友圈"
+                android:textColor="@color/base_text_color_hint"
+                android:textSize="@dimen/base_font_size_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@mipmap/icon_qrcode_copy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="复制链接"
+                android:textColor="@color/base_text_color_hint"
+                android:textSize="@dimen/base_font_size_14" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_share_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@mipmap/icon_share_poster" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="房源海报"
+                android:textColor="@color/base_text_color_hint"
+                android:textSize="@dimen/base_font_size_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_share_close"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/base_list_btn"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/base_text_color_hint"
+        android:textSize="@dimen/base_font_size_17" />
+
+</LinearLayout>

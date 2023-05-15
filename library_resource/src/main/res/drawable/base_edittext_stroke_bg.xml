@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--给输入框加上边框线的背景样式-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/body" />
+            <corners android:radius="5dp" />
+            <stroke
+                android:width="0dp"
+                android:color="@color/text_sub_dark" />
+        </shape>
+    </item>
+</layer-list>

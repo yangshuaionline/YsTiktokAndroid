@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp"
+    android:gravity="center_vertical">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/dialog_selector_block_btn_left"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="现金+超额收益"
+        android:textSize="12sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_333333"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

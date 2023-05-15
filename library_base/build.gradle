@@ -1,0 +1,188 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    kapt {
+        generateStubs = true
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk {
+            // 设置支持的SO库架构
+          //  abiFilters 'armeabi-v7a', 'arm64-v8a' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a','armeabi'
+            abiFilters 'armeabi'//, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a','armeabi'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+//            if (isBuildModule.toBoolean()) {
+//                //
+//            } else {
+//
+//                resources {
+//                    //正式版本时，排除debug文件夹下所有调试文件
+//                    exclude 'src/debug/*'
+//                }
+//            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13.2'
+    api project(':library_resource')
+    api project(':lib_button')
+    api rootProject.ext.dependencies.recyclerview
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.okhttp3Integration
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+    api rootProject.ext.dependencies.fastjson
+    api rootProject.ext.dependencies.smartRefreshLayout
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.rxbinding
+    api rootProject.ext.dependencies.litepal
+    api rootProject.ext.dependencies.autosize
+    // retrofit
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.converterGson
+    api rootProject.ext.dependencies.adapterRxjava2
+    //okhttp
+    api rootProject.ext.dependencies.okhttp
+    api rootProject.ext.dependencies.okhttpUrlconnection
+    api rootProject.ext.dependencies.loggingInterceptor
+    // logger
+    api rootProject.ext.dependencies.logger
+    // rx 6.0权限请求
+    api rootProject.ext.dependencies.rxpermissions
+    // ViewModel和LiveData rx系列与View生命周期同步 // Google ACC ViewModel和LiveData
+    api rootProject.ext.dependencies.lifecycleExtensions
+    annotationProcessor rootProject.ext.dependencies.lifecycleCompiler
+    api rootProject.ext.dependencies.constraintLayout
+    // 图片压缩
+    api rootProject.ext.dependencies.luban
+    // 滚动选择器 https://github.com/Bigkoo/Android-PickerView
+    api rootProject.ext.dependencies.androidPickerView
+    // 底部导航条https://github.com/ittianyu/BottomNavigationViewEx/blob/master/README_ZH.md
+    api rootProject.ext.dependencies.bottomNavigationViewEx
+    // 红点标记badgeView
+    api rootProject.ext.dependencies.badgeview
+    //  FlexboxLayout (非Android X 只能使用1.0以下版本)https://github.com/google/flexbox-layout
+    api rootProject.ext.dependencies.flexbox
+    // BRVAH adapter https://www.jianshu.com/p/b343fcff51b0
+    api rootProject.ext.dependencies.baseRecyclerViewAdapterHelper
+    // StateButton https://github.com/niniloveyou/StateButton/blob/master/README_CHINESE.md
+//    api  rootProject.ext.dependencies.stateButton
+    // alibaba:vlayout https://github.com/alibaba/vlayout/blob/master/README-ch.md
+    api(rootProject.ext.dependencies.vlayout) {
+        transitive = true
+    }
+    // alibaba:UltraViewPager https://github.com/alibaba/UltraViewPager/blob/master/README-ch.md
+    api(rootProject.ext.dependencies.ultraviewpager) {
+        transitive = true
+    }
+    api rootProject.ext.dependencies.commonsLang3
+    //EventBus
+    api rootProject.ext.dependencies.eventbus
+    // 二维码 https://github.com/bingoogolapple/BGAQRCode-Android
+    api rootProject.ext.dependencies.zxing
+    // BindingCollectionAdapter
+    api rootProject.ext.dependencies.bindingcollectionadapter
+    api rootProject.ext.dependencies.bindingcollectionadapterRecyclerview
+    // 百度地图
+    api files('libs/BaiduLBS_Android.jar')
+
+    // ImageViewZoom https://github.com/sephiroth74/ImageViewZoom
+//    api rootProject.ext.dependencies["imageZoom"]
+
+    // https://github.com/Piasy/BigImageViewer
+    api rootProject.ext.dependencies.bigImageViewer
+    api rootProject.ext.dependencies.glideImageLoader
+    api rootProject.ext.dependencies.glideImageViewFactory
+
+    // bugly
+    api rootProject.ext.dependencies.crashreport
+    api rootProject.ext.dependencies.nativecrashreport
+    //    api 'com.tencent.bugly:crashreport_upgrade:1.3.6'
+//    api 'com.tencent.bugly:tinker-support:1.1.5'
+
+
+    // Lottie动画库
+//    api rootProject.ext.dependencies["lottie"]
+
+    // gif-drawable(Glide显示GIF效果不理想 https://github.com/koral--/android-gif-drawable)
+    api rootProject.ext.dependencies.androidGifDrawable
+
+    //流式布局
+    api rootProject.ext.dependencies.flowlayout
+    api rootProject.ext.dependencies.pdfviewpagerLibrary
+
+    api rootProject.ext.dependencies.photoviewLibrary
+    // 微信分享、登录、收藏、支付等功能
+    api rootProject.ext.dependencies.wechatSdkAndroidWithoutMta
+
+    // emoji表情包验证
+    api rootProject.ext.dependencies.emojiJava
+
+    // umeng-sdk
+    api rootProject.ext.dependencies.umsdkAnalytics
+    api rootProject.ext.dependencies.umsdkCommon
+
+
+    //侧滑recyclerview
+    api rootProject.ext.dependencies.recyclerviewSwipe
+
+    //日历控件
+    api rootProject.ext.dependencies.ncalendar
+
+    api rootProject.ext.dependencies.arouterApi
+
+    api rootProject.ext.dependencies.coreKtx
+    // Kotlin
+    api rootProject.ext.dependencies.kotlinStdlib
+    // 协程核心库
+    api rootProject.ext.dependencies.kotlinxCoroutinesCore
+    // 协程Android支持库
+    api rootProject.ext.dependencies.kotlinxCoroutinesAndroid
+    api rootProject.ext.dependencies.lifecycleRuntimeKtx
+    api rootProject.ext.dependencies.lifecycleLivedataKtx
+    api rootProject.ext.dependencies.lifecycleViewmodelKtx
+    //视频缓存
+    api rootProject.ext.dependencies.videocache
+    api rootProject.ext.dependencies.core
+    // 融云 即时通讯基础能力库
+    api rootProject.ext.dependencies.rongcloud_im_lib
+
+}
+
+

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--背景颜色-->
+    <color name="text_background">#F1F1F5</color>
+    <!--主体颜色-->
+    <color name="text_theme">#1B3F8D</color>
+    <!--黑色字体-->
+    <color name="text_030305">#030305</color>
+    <!--内容字体-->
+    <color name="text_999999">#999999</color>
+    <!--名字字体-->
+    <color name="text_333333">#333333</color>
+    <!--红色字体-->
+    <color name="text_e02020">#E02020</color>
+    <!--标签字体-->
+    <color name="text_fbba27">#FBBA27</color>
+    <color name="text_D30000">#D30000</color>
+
+
+
+    <color name="text_666666">#666666</color>
+    <!--Base color-->
+    <color name="theme">#18A65E</color>
+    <color name="theme_down">#13854B</color>
+    <color name="black">#000000</color>
+    <color name="red">#E02020</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="light_grey">#BFBFBF</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#FF4EC081</color>
+    <color name="gay">#666666</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/theme</color>
+    <color name="colorControlNormal">@color/black</color>
+    <color name="select_text_color">#191919</color>
+    <color name="color_blue_dark">#1B3F8D</color>
+    <color name="color_blue_light">#ECF3FD</color>
+    <!-- 红点标记颜色 -->
+    <color name="badge_color">#E7634C</color>
+    <color name="body">#F3F3F7</color>
+    <color name="line">#F1F1F5</color>
+
+    <color name="line1">#E9EAEB</color>
+
+    <color name="line2">#DCDEE2 </color>
+    <color name="line3">#F0F0F0 </color>
+    <color name="base_hint_color">#808080</color>
+
+    <!--MessageBox-->
+    <color name="message_box_background">@color/white</color>
+    <color name="message_box_title">#666666</color>
+    <color name="message_box_version">#CCCCCC</color>
+    <color name="message_box_content">#666666</color>
+
+    <!--常用字体颜色-->
+    <color name="base_text_color">#2b2b2b</color>
+    <color name="base_text_color_hint">#666666</color>
+
+    <!--Text color-->
+    <color name="text">#333333</color>
+    <color name="basetext">#1B3F8D</color>
+    <color name="text_hint">#CCCCCC</color>
+    <color name="text_sub">#AAAAAA</color>
+    <color name="text_sub_dark">#999999</color>
+    <color name="text_sub_dark2">#D8D8D8</color>
+    <color name="text_focuse">#18A65E</color>
+    <color name="text_houser_show">#BFBFBF</color>
+    <color name="text_red">#F90808</color>
+    <color name="text_gray">#94A1AB</color>
+    <color name="text_gray97">#979797</color>
+    <color name="text_grayB2">#B2B2B2</color>
+    <color name="text_perform_detail">#FF3C53</color>
+    <color name="text_1B3F8D">#1B3F8D</color>
+    <color name="text_F47800">#F47800</color>
+    <color name="text_FBF4EA">#FBF4EA</color>
+    <color name="text_D5962C">#D5962C</color>
+    <color name="text_6C9E4D">#6C9E4D</color>
+    <color name="text_FF8D1F">#FF8D1F</color>
+    <color name="text_FFFAEE">#FFFAEE</color>
+    <color name="text_DCDEE2">#DCDEE2</color>
+    <color name="text_EEEEEE">#EEEEEE</color>
+    <color name="text_C5C8CE">#C5C8CE</color>
+    <color name="text_FFEFEF">#FFEFEF</color>
+    <color name="text_FFF5EC">#FFF5EC</color>
+    <color name="text_FF0000">#FF0000</color>
+    <color name="text_DDAD2A">#DDAD2A</color>
+    <color name="text_FFF9E1">#FFF9E1</color>
+    <color name="text_FBFBFB">#FBFBFB </color>
+    <color name="text_A4B2D1">#A4B2D1</color>
+    <color name="text_D1B056">#D1B056</color>
+    <color name="text_FFA651">#FFA651</color>
+    <color name="text_EFEFEF">#EFEFEF</color>
+    <color name="text_blue_dark">#1B3F8D</color>
+
+    <color name="text_blue">#4A90E2</color>
+
+    <color name="text_green">#9AE3F4</color>
+
+    <color name="text_red_gray">#F89797</color>
+    <color name="text_yellow">#F79B04</color>
+    <color name="text_yellow2">#F5A623</color>
+    <color name="text_yellow3">#FF9B21</color>
+
+    <!--详情页面标题颜色-->
+    <color name="cell_title">#333333</color>
+    <color name="cell_sub">#AAAAAA</color>
+
+    <!-- 价格颜色 -->
+    <color name="price_color">#F90808</color>
+
+    <!-- 红色值 -->
+    <color name="bg_flag_red">#FF5A5A</color>
+
+    <!--浅灰色按钮颜色-->
+    <color name="btn_light_gray">#FFE6E6E6</color>
+    <color name="btn_light_gray_down">#FFCACACA</color>
+    <color name="btn_light_gray_bg">#F1F3F5</color>
+    <color name="btn_light_gray_text">#9B9B9B</color>
+    <color name="btn_light_gray_text2">#EDEDED</color>
+    <color name="btn_light_gray_text3">#EFEFEF</color>
+    <color name="btn_light_gray_e6">#E6E6E6</color>
+
+    <!-- 浅灰色背景 -->
+    <color name="btn_light_gray_bg2">#F9FAFB</color>
+
+    <!--时间选择器-->
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <color name="timepicker_toolbar_bg">#e60012</color>
+
+    <!--线条颜色-->
+    <color name="base_samll_color">#FFF7F7F7</color>
+    <color name="base_middle_color">#FFF7F7F7</color>
+    <color name="base_big_color">#FFF7F7F7</color>
+
+    <!--筛选组件-->
+    <color name="filter_text_hint_color">#BFBFBF</color>
+
+    <!--房源标签的背景颜色-->
+    <color name="base_house_tag_bg_color">#F3F8FD</color>
+
+    <color name="contas_tag_clolor">#151515</color>
+    <color name="contas_tag_blue_clolor">#18A65E</color>
+
+
+    <color name="prompt_color">#FEF6E9</color>
+
+    <!--房源列表已浏览颜色-->
+    <color name="house_list_browse_color">#E4F9EE</color>
+
+    <!-- 编辑菜单栏背景 -->
+    <color name="edit_menu_background">#E7F9F5</color>
+
+    <!-- 新房合同状态颜色 -->
+    <color name="new_house_sign_color">#FE484D</color>
+    <color name="new_house_sub_color">#61A2EE</color>
+    <color name="new_house_recruit_color">#F5A623</color>
+    <color name="new_house_check_color">#17BF7E</color>
+    <!-- 新房合同金额颜色 -->
+    <color name="new_house_money_color">#F23036</color>
+
+    <color name="btn_light_gray_prompt">#979797 </color>
+
+
+    <color name="view_line">#EBEBEB </color>
+
+
+    <!--数据-页面头部指标分割线-->
+    <color name="data_head_line">#F5F5F5 </color>
+<!--    企业市场列表灰色分割线-->
+    <color name="gray_line_8e">#E8EAEC</color>
+<!--    黑色-->
+    <color name="black_242831">#242831</color>
+<!--    黑色投资人名字-->
+    <color name="black_text_2829">#28292C</color>
+    <color name="gold_value">#CAAB56</color>
+<!--    新增背景颜色-->
+    <color name="gray_bg_F7F8">#F7F8FA</color>
+<!--    待支付倒计时-->
+    <color name="red_pay">#DE0000</color>
+    <color name="gray_F8F8F9">#F8F8F9</color>
+    <color name="gray_F7F7F9">#F7F7F9</color>
+    <color name="gray_c8c8c8">#c8c8c8</color>
+
+    <color name="whites">#AAB2CB</color>
+    <color name="transparents">#00000000</color>
+    <color name="translucent_white">#E9EAEB</color>
+</resources>

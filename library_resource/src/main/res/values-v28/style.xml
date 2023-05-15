@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--优化APP启动白屏问题-->
+    <style name="UJUZActivityTheme.SplashTheme" parent="UJUZActivityTheme.FullScreen">
+
+        <!--适配Android P刘海屏-->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+</resources>

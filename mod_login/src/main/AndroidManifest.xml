@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yangshuai.module.login">
+    <application>
+        <activity android:name="com.yangshuai.module.login.LoginActivity"
+            android:exported="true"/>
+    </application>
+</manifest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="51dp"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/item_address_tv"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        android:textColor="@color/text"
+        android:text="上海"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"/>
+
+    <ImageView
+        android:id="@+id/iv_city_selected"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@mipmap/base_city_select"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/btn_light_gray_e6"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+

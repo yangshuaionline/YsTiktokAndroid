@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/base_filter_more_bottom"
+        android:orientation="horizontal">
+        <!--第一级-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/base_filter_region_rv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="#F1F1F1" />
+
+        <!--第二级-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/base_filter_region_rv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F8F8F8" />
+
+        <!--第三级-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/base_filter_region_rv3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/base_filter_more_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingTop="0dp"
+        android:paddingEnd="@dimen/base_padding"
+        android:paddingBottom="0dp">
+
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="重置"
+            android:textColor="@color/base_text_color_hint"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/btn_light_gray"
+            app:pressedBackgroundColor="@color/btn_light_gray_down"
+            app:bt_radius="5dp" />
+
+        <!--如果按钮有阴影，请使用android:stateListAnimator="@null"-->
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/theme"
+            app:pressedBackgroundColor="@color/theme_down"
+            app:bt_radius="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

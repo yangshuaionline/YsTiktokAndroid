@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--NestedScrollView会导致列表显示不出来，跟vlayout冲突-->
+    <!--https://github.com/alibaba/vlayout/issues/109-->
+    <!--<androidx.core.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/base_filter_more_bottom"-->
+        <!--android:background="@color/black"-->
+        <!--android:scrollbars="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/base_filter_more_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/base_filter_more_bottom"/>
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_house_code"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/theme"-->
+                <!--android:hint="请输入18位房源码"-->
+                <!--android:padding="16dp"-->
+                <!--android:visibility="visible" />-->
+        <!--</LinearLayout>-->
+    <!--</androidx.core.widget.NestedScrollView>-->
+
+    <LinearLayout
+        android:id="@+id/base_filter_more_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingTop="0dp"
+        android:paddingEnd="@dimen/base_padding"
+        android:paddingBottom="0dp">
+
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="重置"
+            android:textColor="@color/base_text_color_hint"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/btn_light_gray"
+            app:pressedBackgroundColor="@color/btn_light_gray_down"
+            app:bt_radius="5dp" />
+
+        <!--如果按钮有阴影，请使用android:stateListAnimator="@null"-->
+        <com.yangshuai.lib.button.StateButton
+            android:id="@+id/base_filter_more_btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_font_size_17"
+            app:normalBackgroundColor="@color/theme"
+            app:pressedBackgroundColor="@color/theme_down"
+            app:bt_radius="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

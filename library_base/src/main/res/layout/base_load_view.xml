@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="55dp">
+
+    <ImageView
+        android:id="@+id/load_view_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/icon_network_error" />
+
+    <ProgressBar
+        android:id="@+id/load_view_progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone" />
+
+    <!--加载中动画-->
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+    <!--android:id="@+id/animation_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--app:lottie_autoPlay="true"-->
+    <!--app:lottie_fileName="xxth_logo_loading.json"-->
+    <!--app:lottie_loop="true"-->
+    <!--android:visibility="gone"/>-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/load_view_iv_gif"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/yjyz_logo_loading_black"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/load_view_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/base_margin"
+        android:gravity="center"
+        android:text="@string/load_network_error"
+        android:textColor="#666666"
+        android:textSize="@dimen/base_font_size_16" />
+
+    <TextView
+        android:id="@+id/load_view_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/load_refresh_tips"
+        android:textColor="#A6A6A6"
+        android:textSize="@dimen/base_font_size_13"
+        android:visibility="visible" />
+
+    <com.yangshuai.lib.button.StateButton
+        android:id="@+id/load_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:stateListAnimator="@null"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_font_size_16"
+        android:visibility="gone"
+        app:normalBackgroundColor="@color/theme"
+        app:pressedBackgroundColor="@color/theme_down"
+        app:bt_radius="8dp" />
+
+</LinearLayout>

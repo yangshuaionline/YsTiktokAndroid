@@ -1,0 +1,124 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yangshuai.library.base">
+
+
+    <!--震动-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--bugly使用-->
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--获取设备网络状态，禁用后无法获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--网络权限，当禁用后，无法进行检索等相关业务-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--读取设备硬件信息，统计数据-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--获取设备的网络状态，鉴权所需网络代理-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许sd卡写权限，需写入地图数据，禁用后无法显示地图-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--这个权限用于进行网络定位-->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--获取统计数据-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--使用步行AR导航，配置Camera权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--程序在手机屏幕关闭后后台进程仍然运行-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取通讯录联系人-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--安装apk-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--弹窗权限(部分手机下没有该权限会导致Toast不显示)-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!--直接拨号权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--发送短信-->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!--下载新房项目附件权限-->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application>
+        <!-- FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.yangshuai.module"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/base_file_paths" />
+
+        </provider>
+
+        <!--百度地图key-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="s6SqOnS1OWUp5Em4HqCjbWAN7uGGezWh" />
+
+        <!--百度地图定位服务-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!--url路由解析-->
+        <activity android:name="com.yangshuai.library.base.SchameFilterActivity">
+            <intent-filter>
+                <data
+                    android:host="erp.yjyz.com"
+                    android:scheme="router" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <!--图片预览-->
+        <activity
+            android:name="com.yangshuai.library.base.widget.preview.ImagePreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1109664557" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!--    裁剪头像    -->
+        <activity android:name="com.yangshuai.library.base.ClipImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+    </application>
+
+
+</manifest>

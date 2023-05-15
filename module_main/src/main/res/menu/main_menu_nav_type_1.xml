@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+    <!--android:id="@+id/nav_home"-->
+    <!--android:enabled="true"-->
+    <!--android:icon="@mipmap/ic_launcher"-->
+    <!--android:title="首页"-->
+    <!--android:visible="false" />-->
+
+    <item
+        android:id="@+id/nav_message"
+        android:enabled="true"
+        android:icon="@mipmap/icon_nav_msg_unselected"
+        android:title="资讯" />
+    <item
+        android:id="@+id/nav_contacts"
+        android:enabled="true"
+        android:icon="@mipmap/icon_nav_contacts_unselected"
+        android:title="市场"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/nav_work"
+        android:enabled="true"
+        android:icon="@mipmap/icon_nav_work_unselected"
+        android:title="价值" />
+
+
+
+    <item
+        android:id="@+id/nav_mine"
+        android:enabled="true"
+        android:icon="@mipmap/icon_nav_mine_unselected"
+        android:title="我的" />
+
+</menu>

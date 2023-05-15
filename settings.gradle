@@ -1,0 +1,18 @@
+rootProject.name = "com.yangshuai.tiktok"
+include ':lib_dialog'
+include ':mod_video'
+include ':mod_im'
+include ':module_message'
+include ':mod_cart'
+include ':mod_pay'
+include ':mod_login'
+include ':module_mine'
+include ':module_first'
+include ':module_publish'
+include ':module_find'
+include ':module_main'
+include ':library_resource'
+include ':library_base'
+include ':lib_button'
+include ':app'
+

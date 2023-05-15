@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yangshuai.library.base.widget.MaxHeightScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_dialog_alert_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+</com.yangshuai.library.base.widget.MaxHeightScrollView>

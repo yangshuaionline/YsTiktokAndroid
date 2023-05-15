@@ -1,0 +1,149 @@
+/**  在此处对整个项目的gradle统一进行配置  **/
+ext {
+    // Android开发版本配置
+    android = [
+            compileSdkVersion: 31,// 编译版本 Android 10.0
+            buildToolsVersion: "30.0.2",
+            applicationId    : "com.yangshuai.tiktok", // 应用ID
+            minSdkVersion    : 24, // 最低兼容 Android 7.0
+            targetSdkVersion : 30, // 目标软件开发版本 Android 9.0
+            versionCode      : 20220422,// 版本号
+            versionName      : "1.0.0", // 版本名称
+    ]
+
+    // Version配置
+
+    versions = [
+//            "support-version"   : "28.0.0", // 官方支持库版本
+//            "junit-version"     : "4.12", // 单元测试版本
+    ]
+    // Support配置
+    support = [
+//            "constraint-layout"       : "1.0.0-beta2",
+//            'support-v4'              : "com.android.support:support-v4:${versions["support-version"]}",
+//            'appcompat-v7'            : 'androidx.appcompat:appcompat:1.1.0',
+//            'recyclerview-v7'         : 'androidx.recyclerview:recyclerview:1.1.0',
+//            'support-v13'             : "com.android.support:support-v13:${versions["support-version"]}",
+//            'support-fragment'        : "com.android.support:support-fragment:${versions["support-version"]}",
+//            'design'                  : 'com.google.android.material:material:1.1.0-rc01',
+//            'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
+//            'junit'                   : "junit:junit:${versions["junit-version"]}",
+
+    ]
+
+    // 第三方依赖库配置
+    dependencies = [
+            // ARouter 路由框架 https://github.com/alibaba/ARouter/blob/master/README_CN.md
+            "arouterApi":"com.alibaba:arouter-api:1.5.2",
+            "arouterCompiler":"com.alibaba:arouter-compiler:1.5.2",
+            "coreKtx":"androidx.core:core-ktx:1.7.0",
+            "constraintLayout":"androidx.constraintlayout:constraintlayout:2.0.4",
+            // 阿里路由框架
+            "appcompat":"androidx.appcompat:appcompat:1.2.0",
+            "core":"androidx.core:core:1.7.0",
+            "annotation":"androidx.annotation:annotation:1.7.0",
+            "material":"com.google.android.material:material:1.1.0-rc01",
+            "jiaozivideoplayer":"cn.jzvd:jiaozivideoplayer:7.7.0",
+            "annotations":"org.jetbrains:annotations:15.0",
+            "cartLayout":"com.github.OCNYang:CartLayout:v1.0.3",
+            "recyclerview":"androidx.recyclerview:recyclerview:1.1.0",
+            "glide":"com.github.bumptech.glide:glide:4.12.0",
+            "okhttp3Integration":"com.github.bumptech.glide:okhttp3-integration:4.12.0",
+            "glideCompiler":"com.github.bumptech.glide:compiler:4.12.0",
+            "fastjson":"com.alibaba:fastjson:1.2.70",
+            // SmartRefreshLayout 上拉下拉刷新 刷新框架 https://github.com/scwang90/SmartRefreshLayout
+            "smartRefreshLayout":"com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1",
+            "rxjava":"io.reactivex.rxjava2:rxjava:2.2.19",
+            "rxbinding":"com.jakewharton.rxbinding2:rxbinding:2.2.0",
+            // ORM数据库 https://github.com/LitePalFramework/LitePal
+            "litepal":"org.litepal.android:java:3.0.0",
+            // 屏幕适配AndroidAutoSize屏幕适配方案终极版
+            "autosize":"me.jessyan:autosize:1.1.2",
+            // retrofit
+            "retrofit":"com.squareup.retrofit2:retrofit:2.9.0",
+            "converterGson":"com.squareup.retrofit2:converter-gson:2.9.0",
+            "adapterRxjava2":"com.squareup.retrofit2:adapter-rxjava2:2.9.0",
+            //okhttp
+            "okhttp":"com.squareup.okhttp3:okhttp:4.7.2",
+            "okhttpUrlconnection":"com.squareup.okhttp:okhttp-urlconnection:2.7.5",
+            "loggingInterceptor":"com.squareup.okhttp3:logging-interceptor:4.7.2",
+            //logger
+            "logger":"com.orhanobut:logger:2.2.0",
+            // rx 6.0权限请求
+            "rxpermissions":"com.github.tbruyelle:rxpermissions:0.10.2",
+            // ViewModel和LiveData rx系列与View生命周期同步 // Google ACC ViewModel和LiveData
+            "lifecycleExtensions":"androidx.lifecycle:lifecycle-extensions:2.2.0",
+            "lifecycleCompiler":"androidx.lifecycle:lifecycle-compiler:2.2.0",
+            // 图片压缩
+            "luban":"top.zibin:Luban:1.1.8",
+            // 滚动选择器 https://github.com/Bigkoo/Android-PickerView
+            "androidPickerView":"com.contrarywind:Android-PickerView:4.1.8",
+            // 底部导航条https://github.com/ittianyu/BottomNavigationViewEx/blob/master/README_ZH.md
+            "bottomNavigationViewEx":"com.github.ittianyu:BottomNavigationViewEx:2.0.2",
+            // 红点标记badgeView
+            "badgeview":"q.rorbin:badgeview:1.1.0",
+            //  FlexboxLayout (非Android X 只能使用1.0以下版本)https://github.com/google/flexbox-layout
+            "flexbox":"com.google.android:flexbox:1.0.0",
+            // BRVAH adapter https://www.jianshu.com/p/b343fcff51b0
+            "baseRecyclerViewAdapterHelper":"com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46",
+            // StateButton https://github.com/niniloveyou/StateButton/blob/master/README_CHINESE.md
+//            "stateButton":"com.github.niniloveyou:StateButton:v1.0.0",
+            // alibaba:vlayout https://github.com/alibaba/vlayout/blob/master/README-ch.md
+            "vlayout":"com.alibaba.android:vlayout:1.3.0@aar",
+            // alibaba:UltraViewPager https://github.com/alibaba/UltraViewPager/blob/master/README-ch.md
+            "ultraviewpager":"com.alibaba.android:ultraviewpager:1.0.7.7@aar",
+            "commonsLang3":"org.apache.commons:commons-lang3:3.10",
+            //EventBus
+            "eventbus":"org.greenrobot:eventbus:3.2.0",
+            // 二维码 https://github.com/bingoogolapple/BGAQRCode-Android
+            "zxing":"cn.bingoogolapple:bga-qrcode-zxing:1.3.6",
+            // BindingCollectionAdapter
+            "bindingcollectionadapter":"me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:4.0.0",
+            "bindingcollectionadapterRecyclerview":"me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:4.0.0",
+            // https://github.com/Piasy/BigImageViewer
+            "bigImageViewer":"com.github.piasy:BigImageViewer:1.8.0",
+            "glideImageLoader":"com.github.piasy:GlideImageLoader:1.8.0",
+            "glideImageViewFactory":"com.github.piasy:GlideImageViewFactory:1.8.0",
+            // bugly
+            "crashreport":"com.tencent.bugly:crashreport:2.8.6",
+            "nativecrashreport":"com.tencent.bugly:nativecrashreport:3.6.0.1",
+            // gif-drawable(Glide显示GIF效果不理想 https://github.com/koral--/android-gif-drawable)
+            "androidGifDrawable":"pl.droidsonroids.gif:android-gif-drawable:1.2.20",
+            //流式布局
+            "flowlayout":"com.hyman:flowlayout-lib:1.1.2",
+            "pdfviewpagerLibrary":"es.voghdev.pdfviewpager:library:1.0.6",
+
+            "photoviewLibrary":"com.bm.photoview:library:1.4.1",
+            // 微信分享、登录、收藏、支付等功能
+            "wechatSdkAndroidWithoutMta":"com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.8",
+            // emoji表情包验证
+            "emojiJava":"com.vdurmont:emoji-java:5.1.1",
+            // umeng-sdk
+            "umsdkAnalytics":"com.umeng.umsdk:analytics:8.0.0",
+            "umsdkCommon":"com.umeng.umsdk:common:2.1.0",
+            //侧滑recyclerview
+            "recyclerviewSwipe":"com.yanzhenjie:recyclerview-swipe:1.1.4",
+            //日历控件
+            "ncalendar":"com.necer.ncalendar:ncalendar:5.0.0",
+            // 协程Android支持库
+            "kotlinStdlib":"org.jetbrains.kotlin:kotlin-stdlib:1.6.20",
+            "kotlinxCoroutinesCore":"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0",
+            "kotlinxCoroutinesAndroid":"org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0",
+            "lifecycleRuntimeKtx":"androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-beta01",
+            "lifecycleLivedataKtx":"androidx.lifecycle:lifecycle-livedata-ktx:2.5.0-beta01",
+            "lifecycleViewmodelKtx":"androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-beta01",
+            //视频缓存
+            "videocache":"com.danikula:videocache:2.7.0",
+            "multidex":"androidx.multidex:multidex:2.0.1",
+            //商品属性选择
+            "skuLib":"com.github.Wongxd:skuLib:1.0.2",
+            //融云// 即时通讯基础能力库
+            "rongcloud_im_lib":"cn.rongcloud.sdk:im_lib:5.3.6",
+            // 即时通讯 UI 基础组件  集成会依赖冲突
+//            "rongcloud_im_kit":"cn.rongcloud.sdk:im_kit:5.3.6",
+//            启动页
+            "splashscreen":'androidx.core:core-splashscreen:1.0.0-beta01',
+    ]
+}
+
+

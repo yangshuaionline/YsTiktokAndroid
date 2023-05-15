@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yangshuai.module.im">
+    <application>
+        <activity android:name="com.yangshuai.module.im.ImMainActivity"
+            android:exported="true"/>
+        <activity android:name="com.yangshuai.module.im.activity.ImGroupActivity"
+            android:exported="true"/>
+        <activity android:name="com.yangshuai.module.im.activity.ImChattingActivity"
+            android:exported="true"/>
+        <activity android:name="com.yangshuai.module.im.activity.ImMessageListActivity"
+            android:exported="true"/>
+    </application>
+</manifest>

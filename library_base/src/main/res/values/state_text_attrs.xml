@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--StateText         Start-->
+
+    <!--text color-->
+    <attr name="normalTextColor" format="color|reference" />
+    <attr name="pressedTextColor" format="color|reference" />
+    <attr name="unableTextColor" format="color|reference" />
+    <!--stroke width and color, dash width, dash gap-->
+    <attr name="strokeDashWidth" format="dimension|reference" />
+    <attr name="strokeDashGap" format="dimension|reference" />
+    <attr name="normalStrokeWidth" format="dimension|reference" />
+    <attr name="pressedStrokeWidth" format="dimension|reference" />
+    <attr name="unableStrokeWidth" format="dimension|reference" />
+    <attr name="normalStrokeColor" format="color|reference" />
+    <attr name="pressedStrokeColor" format="color|reference" />
+    <attr name="unableStrokeColor" format="color|reference" />
+    <!--background color-->
+    <attr name="normalBackgroundColor" format="color|reference" />
+    <attr name="pressedBackgroundColor" format="color|reference" />
+    <attr name="unableBackgroundColor" format="color|reference" />
+    <!--background radius-->
+    <attr name="state_button_radius" format="dimension|reference" />
+    <attr name="state_button_round" format="boolean|reference" />
+    <!--animation duration-->
+    <attr name="animationDuration" format="integer|reference" />
+
+    <declare-styleable name="StateText">
+        <!--text color-->
+        <attr name="normalTextColor" />
+        <attr name="pressedTextColor" />
+        <attr name="unableTextColor"  />
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" />
+        <attr name="strokeDashGap" />
+        <attr name="normalStrokeWidth" />
+        <attr name="pressedStrokeWidth" />
+        <attr name="unableStrokeWidth" />
+        <attr name="normalStrokeColor" />
+        <attr name="pressedStrokeColor" />
+        <attr name="unableStrokeColor" />
+        <!--background color-->
+        <attr name="normalBackgroundColor" />
+        <attr name="pressedBackgroundColor" />
+        <attr name="unableBackgroundColor" />
+        <!--background radius-->
+        <attr name="state_button_radius" />
+        <attr name="state_button_round" />
+        <!--animation duration-->
+        <attr name="animationDuration" />
+    </declare-styleable>
+
+
+    <!--StateText          End-->
+</resources>

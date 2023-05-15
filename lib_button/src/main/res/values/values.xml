@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="StateButton" tools:ignore="ResourceName">
+
+        <!--text color-->
+        <attr format="color|reference" name="normalTextColor"/>
+        <attr format="color|reference" name="pressedTextColor"/>
+        <attr format="color|reference" name="unableTextColor"/>
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr format="dimension|reference" name="strokeDashWidth"/>
+        <attr format="dimension|reference" name="strokeDashGap"/>
+        <attr format="dimension|reference" name="normalStrokeWidth"/>
+        <attr format="dimension|reference" name="pressedStrokeWidth"/>
+        <attr format="dimension|reference" name="unableStrokeWidth"/>
+        <attr format="color|reference" name="normalStrokeColor"/>
+        <attr format="color|reference" name="pressedStrokeColor"/>
+        <attr format="color|reference" name="unableStrokeColor"/>
+
+        <!--background color-->
+        <attr format="color|reference" name="normalBackgroundColor"/>
+        <attr format="color|reference" name="pressedBackgroundColor"/>
+        <attr format="color|reference" name="unableBackgroundColor"/>
+
+        <!--background radius-->
+        <attr format="dimension|reference" name="bt_radius"/>
+        <attr format="boolean|reference" name="bt_round"/>
+
+        <!--animation duration-->
+        <attr format="integer|reference" name="animationDuration"/>
+
+    </declare-styleable>
+    <declare-styleable name="StateImageView" tools:ignore="ResourceName">
+        <attr format="color|reference" name="normalBackground"/>
+        <attr format="color|reference" name="pressedBackground"/>
+        <attr format="color|reference" name="unableBackground"/>
+
+        <!--animation duration-->
+        <attr format="integer|reference" name="AnimationDuration"/>
+    </declare-styleable>
+    <string name="app_name" tools:ignore="ResourceName">libarary</string>
+</resources>

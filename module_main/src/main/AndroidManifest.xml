@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yangshuai.module.main">
+
+    <application>
+        <activity
+            android:name="com.yangshuai.module.main.activity.MainActivitykt"
+            android:exported="true" />
+        <!-- 在自己组件中注册Activity -->
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="signin_app_name">module_signin</string>
+    <string name="signin_user_protocol_text">《服务协议》</string>
+    <string name="signin_privacy_policy_text">《隐私协议》</string>
+</resources>

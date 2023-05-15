@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--更多筛选的组标题-->
+    <View
+        android:id="@+id/view_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_margin"
+        android:visibility="gone"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/base_filter_more_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingEnd="@dimen/base_padding"
+        android:text="分组标题"
+        android:textColor="@color/text"
+        android:textSize="@dimen/base_font_size_17"
+        android:textStyle="bold" />
+</LinearLayout>

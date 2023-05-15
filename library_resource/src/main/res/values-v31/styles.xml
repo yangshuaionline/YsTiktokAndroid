@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    优化启动页-->
+    <style name="SplashTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/app_icon_jzsh</item>
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+    </style>
+</resources>

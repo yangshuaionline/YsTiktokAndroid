@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default text typeface style. -->
+    <attr name="regionHouseType" format="integer">/>
+        <flag name="used" value="1" />
+        <flag name="rent" value="2" />
+    </attr>
+
+    <!--RegionMultipleFilterContainer-->
+    <declare-styleable name="RegionMultipleFilterContainer">
+        <attr name="regionHouseType" />
+    </declare-styleable>
+    <declare-styleable name="DecimalEditText">
+        <attr name="decimalNumber" format="integer"/>
+    </declare-styleable>
+
+</resources>

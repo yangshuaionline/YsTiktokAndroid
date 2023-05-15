@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="现金金额"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"/>
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="35dp"
+        android:hint="请输入现金金额"
+        android:textCursorDrawable="@null"
+        android:padding="10dp"
+        android:background="@drawable/dialog_gray_radius_3"
+        android:textSize="12sp"
+        android:textColor="@color/text_333333"/>
+</LinearLayout>
